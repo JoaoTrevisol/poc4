@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens de Gatos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagens de Gatos Aleatórias</h1>
+    <button id="fetchButton">Buscar Imagem de Gato</button>
+    <div id="catContainer"></div>
+
+    <script>
+        async function fetchCatImage(container) {      
+            try {
+                const endpoint = 'https://api.thecatapi.com/v1/images/search'; // URL da Cat API
+                let response = await fetch(endpoint);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                let data = await response.json();
+                let urlIGM = data[0].url; 
+                let content = document.getElementById(container);
+                content.innerHTML += `<img src="${urlIGM}" alt="Cat Image" />`; 
+
+            } catch (error) {
+                console.log('error', error); 
+            } finally {
+                console.log("FIM");
+            }
+        }
+
+        // Adiciona um evento ao botão para buscar a imagem
+        document.getElementById('fetchButton').addEventListener('click', () => {
+            fetchCatImage('catContainer');
+        });
+    </script>
+</body>
+</html>
+
