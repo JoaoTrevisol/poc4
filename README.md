@@ -20,7 +20,7 @@ Essa linha define o endpoint da API que será usado para buscar a imagem.
 
 ![image](https://github.com/user-attachments/assets/4a0f9a0c-b7d2-431e-9751-3f86425e421c)
 
-Aqui, usamos fetch() para fazer uma requisição à API. O await permite que o código aguarde a resposta antes de continuar.
+O fetch é uma função que permite fazer requisições assíncronas a recursos na web, como APIs nesse exemplo.
 
 ## ⚠️ Tratamento de Erros:
 
