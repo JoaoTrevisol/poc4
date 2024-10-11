@@ -59,7 +59,7 @@ Adicionando o Evento:
 		.addEventListener('click', () => {
    	 fetchCatImage('catContainer');
      
-Quando o botão é clicado, a função fetchCatImage é chamada, passando o ID do contêiner onde a imagem será exibida.
+Quando o botão é clicado, a função fetchCatImage é chamada, passando o ID do contêiner onde a imagem será exibida, e a cada vez que o botão é pressionado, uma imagem nova é exibida. Caso queira reiniciar a sequência de imagens, recarregue a página e aperte o botão novamente.
 
 Conclusão 🎉
 Esse código é uma excelente introdução à utilização de APIs e manipulação de DOM com JavaScript. Ao clicar no botão, uma nova imagem de gato aparece, tornando a experiência interativa e divertida. Sinta-se à vontade para explorar e modificar o código!
