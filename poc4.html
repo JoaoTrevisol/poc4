@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 50px;
+            background-color: gainsboro;
         }
         img {
             max-width: 100%;
@@ -16,11 +17,29 @@
             border: 2px solid #ccc;
             border-radius: 8px;
         }
+        button{
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color:black;
+            background-color:gainsboro;
+            border: 1px solid black;
+            border-radius: 15px;
+
+        }
+
+        button:active {
+            background-color:black;
+            color: gainsboro;
+            transform: translateY(2px);
+        }
     </style>
 </head>
 <body>
     <h1>Imagens de Gatos Aleatórias</h1>
-    <button id="fetchButton">Buscar Imagem de Gato</button>
+    <button id="fetchButton">Buscar um Gato</button>
     <div id="catContainer"></div>
 
     <script>
